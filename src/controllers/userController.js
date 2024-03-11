@@ -58,7 +58,7 @@ let userlogin = async function(req, res, next) {
 
 const getAllUsers = async (req, res) => {
     try {
-        const users = await db.crbt_users.findAll();
+        const users = await db.users.findAll();
         if (users && users.length > 0) {
             return res.status(200).json({ success: true, message: "Users retrieved successfully", users });
         } else {
